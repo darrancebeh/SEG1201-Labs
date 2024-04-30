@@ -1,0 +1,31 @@
+(a)
+
+CREATE TABLE product (
+  id VARCHAR(10),
+  name VARCHAR(20),
+  description CHAR(30),
+  quantity INT(10),
+  price_per_unit DECIMAL(10, 2)
+);
+
+(b)
+
+INSERT INTO product (id, name, description, quantity, price_per_unit)
+VALUES ('B-100', 'book', 'materials for schools', 10, 1.00);
+
+INSERT INTO product (id, name, description, quantity, price_per_unit)
+VALUES ('S-201', 'shoes', 'shoes for kindergarten', 300, 2.50);
+
+INSERT INTO product (id, name, description, quantity, price_per_unit)
+VALUES ('N-122', 'snacks', 'snacks for break time', 400, 1.00);
+
+INSERT INTO product (id, name, description, quantity, price_per_unit)
+VALUES ('B-101', 'magazine', 'magazine for the office', 50, 99.90);
+
+(c)
+
+SELECT * from product
+
+(d)
+
+DELETE FROM product WHERE quantity > 280;

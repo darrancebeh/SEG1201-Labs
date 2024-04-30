@@ -1,0 +1,29 @@
+(a)
+
+CREATE TABLE student
+(name VARCHAR2(20),
+gender CHAR(6),
+DOB DATE,
+CGPA NUMBER(1,1)
+)
+
+(b)
+
+INSERT INTO student (name, gender, dob, cgpa)
+VALUES ('George', 'Male', TO_DATE('01-JAN-2001', 'DD-MON-YYYY'), 3.2)
+
+INSERT INTO student (name, gender, dob, cgpa)
+VALUES ('Jane', 'Female', TO_DATE('21-DEC-1999', 'DD-MON-YYYY'), 2.6)
+
+(c)
+
+SELECT * from student
+
+(d)
+
+DELETE FROM student
+WHERE name = 'George'
+
+(e)
+
+DROP TABLE student;
