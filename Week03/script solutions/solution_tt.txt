@@ -1,0 +1,14 @@
+--  List the judge names which start with G.
+
+SELECT * FROM judge
+WHERE NAME LIKE 'G%'
+
+-- List the show names for shows that were not held in 'DUBBO'.
+
+SELECT * FROM shows
+WHERE SHOW_ADDRESS NOT LIKE '%DUBBO%'
+
+--  List the horse names where the second character of the name consists of 'A'.
+
+SELECT * FROM horse
+WHERE NAME LIKE '_A%'

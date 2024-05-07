@@ -1,0 +1,44 @@
+-- List the records of all the customers.
+
+SELECT * from rrcustomer
+
+-- List the title and the name of all the customers with the title ‘Mr’.
+
+SELECT * from rrcustomer
+WHERE title = 'Mr'
+
+-- List the details of the customer with the customer number 1003.
+
+SELECT * from rrcustomer
+WHERE CUST_NUM = '1003'
+
+--  List details of all models with a monthly charge of 45.00.
+
+SELECT * FROM model
+WHERE MTH_CHARGE = '45'
+
+-- List the non-current hires of customer 1001 (non-current means the
+customer does not currently make any hires)
+
+SELECT * FROM hire
+WHERE CUST_NUM = '1001' AND PAID_TILL <= '07-MAY-2024'
+
+-- List the non-current hires of customer 1001 (non-current means the
+customer does not currently make any hires)
+
+-- List all the records of customers 1001 or 1003 who had hired item
+numbers 2001 or 2005.
+
+SELECT rrcustomer.* FROM rrcustomer
+INNER JOIN hire on rrcustomer.CUST_NUM = hire.CUST_NUM
+WHERE hire.STOCK_NUM = '2001' or hire.STOCK_NUM = '2005'
+
+-- List customer records who have the letter ‘i’ somewhere in their name.
+
+SELECT * FROM rrcustomer
+WHERE name LIKE '%i%'
+
+-- List models with monthly charges between 89 and 169.
+
+SELECT * FROM model
+WHERE MTH_CHARGE >= 89 AND MTH_CHARGE <= 169
