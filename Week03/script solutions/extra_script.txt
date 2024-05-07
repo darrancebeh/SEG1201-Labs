@@ -1,0 +1,18 @@
+-- b. List all the part details which has its description with the word "washer" in the description.
+
+SELECT * FROM PART
+WHERE lower(DESCRIPTION) LIKE '%washer%'
+
+-- c. List the part numbers, part description, and on-hand value (OnHand * Price) for each part in item class SG.
+
+SELECT PARTNUM, DESCRIPTION, (ONHAND * PRICE) AS "On-Hand Value"
+FROM PART
+WHERE CLASS = 'SG'
+
+-- d. List all the sales representatives whose last name has first character as 'L' an the fourth character as 'g'. The representatives stay in 'FM' state, and have commission > 2000.
+
+SELECT * FROM rep
+WHERE LASTNAME = 'L%' AND
+LASTNAME = '___g%' AND 
+STATE = 'FM' AND
+COMMISSION > 2000
